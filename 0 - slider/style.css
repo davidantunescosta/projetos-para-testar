@@ -1,0 +1,114 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+}
+
+.manual-nagivation {
+ position: absolute;
+ width: 800px;
+ margin-top: -40px;
+ display: flex;
+ justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) { /*Menos no ultimo item, eu vou aplicar as seguintes configurações*/
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0px;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navegation-auto div {
+  border: 2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navegation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navegation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navegation-auto .auto-btn1 {
+  background-color: white;
+}
+
+#radio2:checked ~ .navegation-auto .auto-btn2 {
+  background-color: white;
+}
+
+#radio3:checked ~ .navegation-auto .auto-btn3 {
+  background-color: white;
+}
+
+#radio4:checked ~ .navegation-auto .auto-btn4 {
+  background-color: white;
+}
